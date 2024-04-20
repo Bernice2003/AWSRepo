@@ -1,117 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Destinations</title>
-    <style>
-        /* Reset some default styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Destinations</title>
+<style>
+  /* CSS styles for the header, featured destinations, and footer */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
 
-        /* Header styles */
-        header {
-            background-color: #f9c542;
-            padding: 20px;
-            text-align: center;
-        }
+  header {
+    background-color: #f8d7da;
+    padding: 10px 0;
+    text-align: center;
+  }
 
-        header h1 {
-            font-size: 24px;
-            color: #333; /* Improved contrast color */
-        }
+  nav {
+    display: inline-block;
+    margin-top: 10px;
+  }
 
-        /* Navigation menu styles */
-        nav ul {
-            list-style: none;
-            margin-top: 20px;
-        }
+  nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+  }
 
-        nav ul li {
-            display: inline-block;
-            margin-right: 20px;
-        }
+  .featured-destination {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        /* Featured destinations section styles */
-        .destination {
-            display: flex;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .destination img {
-            max-width: 100%;
-            margin-right: 20px;
-        }
-
-        .destination p {
-            font-size: 16px;
-            color: #555;
-        }
-
-        /* Footer styles */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-    </style>
+  footer {
+    background-color: #f8d7da;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Explore Exciting Destinations</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#product">Product</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+  <h1>Travel Destinations</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#product">Product</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <section class="destination">
-        <img src="paris.jpg" alt="Paris">
-        <p>Paris, France - The City of Love. Explore iconic landmarks like the Eiffel Tower and Louvre Museum.</p>
-    </section>
+<section id="home" class="featured-destination">
+  <h2>Featured Destination 1</h2>
+  <img src="destination1.jpg" alt="Destination 1">
+  <p>Description of destination 1.</p>
+</section>
 
-    <section class="destination">
-        <img src="bali.jpg" alt="Bali">
-        <p>Bali, Indonesia - Tropical paradise with stunning beaches, lush rice terraces, and vibrant culture.</p>
-    </section>
+<section id="product" class="featured-destination">
+  <h2>Featured Destination 2</h2>
+  <img src="destination2.jpg" alt="Destination 2">
+  <p>Description of destination 2.</p>
+</section>
 
-    <!-- Add more featured destinations here -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <form id="contact-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    <button type="submit">Submit</button>
+  </form>
+</section>
 
-    <footer>
-        © 2024 Travel Destinations. All rights reserved.
-    </footer>
+<footer>
+  <p>&copy; 2022 Travel Destinations. All Rights Reserved.</p>
+</footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+<script>
+  // JavaScript for smooth scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
 
-        // Form submission handling (you can add your own logic here)
-        // Example:
-        // const contactForm = document.querySelector('#contact-form');
-        // contactForm.addEventListener('submit', function (e) {
-        //     e.preventDefault();
-        //     // Handle form submission (send data to server or display a thank you message)
-        // });
-    </script>
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // JavaScript for form submission handling
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Add your form submission logic here
+  });
+</script>
 </body>
 </html>

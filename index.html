@@ -1,124 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Luxury Travel for Women</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			font-family: Arial, sans-serif;
-			scroll-behavior: smooth;
-		}
-		
-		.header {
-			background-color: #4CAF50;
-			color: #333; /* changed text color to darker shade */
-			padding: 10px 0;
-			position: fixed;
-			width: 100%;
-			top: 0;
-			left: 0;
-			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		}
-		
-		.header a {
-			color: #333; /* changed text color to darker shade */
-			text-decoration: none;
-			padding: 5px 10px;
-		}
-		
-		.header a:hover {
-			background-color: #3e8e41;
-		}
-		
-		.featured-destination {
-			height: 100vh;
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-			display: flex;
-	align-items: center;
-		justify-content: center;
-		color: #333; /* changed text color to darker shade */
-		font-size: 2rem;
-		text-align: center;
-		padding: 0 20px;
-		}
-		
-		.footer {
-			background-color: #4CAF50;
-			color: #333; /* changed text color to darker shade */
-			padding: 10px 0;
-			text-align: center;
-			position: fixed;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-		}
-		
-		@media (max-width: 768px) {
-			.featured-destination {
-				font-size: 1.5rem;
-			}
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Destinations</title>
+    <style>
+        body { font-family: Arial, sans-serif; scroll-behavior: smooth; }
+        header { background-color: #FFD700; padding: 20px; text-align: center; }
+        header a { margin: 0 15px; color: #000; text-decoration: none; font-size: 20px; }
+        .featured { display: flex; justify-content: space-around; margin: 20px 0; }
+        .destination { text-align: center; }
+        footer { background-color: #FFD700; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%; }
+    </style>
 </head>
 <body>
 
-<div class="header">
-	<div class="container">
-		<a href="#home">Home</a>
-		<a href="#products">Product</a>
-		<a href="#contact">Contact</a>
-	</div>
+<header>
+    <a href="#home">Home</a>
+    <a href="#product">Product</a>
+    <a href="#contact">Contact</a>
+</header>
+
+<div id="home" class="featured">
+    <div class="destination">
+        <img src="paris.jpg" alt="Paris" style="width:100%">
+        <h3>Paris, France</h3>
+        <p>Explore the city of love with its world-renowned cuisine and art.</p>
+    </div>
+    <div class="destination">
+        <img src="maldives.jpg" alt="Maldives" style="width:100%">
+        <h3>Maldives</h3>
+        <p>Gorgeous overwater bungalows and stunning beaches await you.</p>
+    </div>
 </div>
 
-<div id="home" class="featured-destination" style="background-image: url('https://source.unsplash.com/random/1600x900/?travel,beach');">
-	<h1>Luxury Travel for Women</h1>
-	<p>Explore the world in style</p>
+<div id="product"></div>
+
+<div id="contact">
+    <form onsubmit="handleSubmit(); return false;">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <input type="submit">
+    </form>
 </div>
 
-<div id="products" class="featured-destination" style="background-image: url('https://source.unsplash.com/random/1600x900/?travel,mountains');">
-	<h1>Featured Destinations</h1>
-	<div class="destination">
-		<img src="https://source.unsplash.com/random/400x300/?travel,paris" alt="Paris">
-		<h2>Paris, France</h2>
-		<p>Experience the city of love like never before. Stay in a 5-star hotel, dine in the best restaurants, and shop in the most exclusive boutiques.</p>
-	</div>
-	<div class="destination">
-		<img src="https://source.unsplash.com/random/400x300/?travel,maldives" alt="Maldives">
-		<h2>Maldives</h2>
-		<p>Relax and unwind in one of the most beautiful places on earth. Stay in an overwater villa, enjoy water sports, and indulge in spa treatments.</p>
-	</div>
-	<div class="destination">
-		<img src="https://source.unsplash.com/random/400x300/?travel,italy" alt="Italy">
-		<h2>Italy</h2>
-		<p>Discover the rich history and culture of Italy. Visit ancient ruins, taste authentic Italian cuisine, and enjoy the breathtaking landscapes.</p>
-	</div>
-</div>
+<footer>
+    © 2023 Luxury Destinations
+</footer>
 
-<div id="contact" class="featured-destination" style="background-image: url('https://source.unsplash.com/random/1600x900/?travel,cityscape');">
-	<h1>Contact Us</h1>
-	<form id="contact-form">
-		<label for="name">Name:</label><br>
-		<input type="text" id="name" name="name" required><br>
-		<label for="email">Email:</label><br>
-		<input type="email" id="email" name="email" required><br>
-		<label for="message">Message:</label><br>
-		<textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
-		<input type="submit" value="Send">
-	</form>
-	<script>
-		document.getElementById('contact-form').addEventListener('submit', function(event) {
-			event.preventDefault();
-			alert('Your message has been sent. We will get back to you soon.');
-		});
-	</script>
-</div>
-
-<div class="footer">
-	<p>Copyright © 2023 Luxury Travel for Women</p>
-</div>
+<script>
+    function handleSubmit() {
+        alert('Thank you for your submission!');
+    }
+</script>
 
 </body>
 </html>

@@ -1,122 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Recommendations for 21-year-old Women</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        header a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        header a:hover {
-            color: #ddd;
-        }
-        main {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .destination {
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-        .destination img {
-            width: 200px;
-            height: 150px;
-            object-fit: cover;
-            margin-right: 20px;
-            margin-bottom: 20px;
-        }
-        .destination h2 {
-            margin-bottom: 10px;
-        }
-        .destination p {
-            margin-bottom: 10px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Destinations</title>
+<style>
+  body { font-family: Arial, sans-serif; }
+  .header { background-color: #FFD700; padding: 20px; text-align: center; }
+  .navigation button { background-color: blue; color: white; border: none; padding: 10px; margin-right: 10px; cursor: pointer; }
+  .footer { background-color: #333; color: white; text-align: center; padding: 10px; position: fixed; width: 100%; bottom: 0; }
+  .smooth-scroll { scroll-behavior: smooth; }
+</style>
 </head>
-<body>
-    <header>
-        <a href="#home">Home</a>
-        <a href="#product">Product</a>
-        <a href="#contact">Contact</a>
-    </header>
-    <main>
-        <section id="home">
-            <h1>Travel Recommendations for 21-year-old Women</h1>
-            <p>We have curated a list of amazing travel destinations for women like you who are earning over $160,000 annually.</p>
-        </section>
-        <section id="product">
-            <h2>Featured Destinations</h2>
-            <div class="destination">
-                <img src="destination1.jpg" alt="Destination 1">
-                <div>
-                    <h2>Destination 1</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisi vel aliquam bibendum, nisi nisl tincidunt nisl, a aliquet nibh nisl ut nisl.</p>
-                </div>
-            </div>
-            <div class="destination">
-                <img src="destination2.jpg" alt="Destination 2">
-                <div>
-                    <h2>Destination 2</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisi vel aliquam bibendum, nisi nisl tincidunt nisl, a aliquet nibh nisl ut nisl.</p>
-                </div>
-            </div>
-            <div class="destination">
-                <img src="destination3.jpg" alt="Destination 3">
-                <div>
-                    <h2>Destination 3</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisi vel aliquam bibendum, nisi nisl tincidunt nisl, a aliquet nibh nisl ut nisl.</p>
-                </div>
-            </div>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        &copy; 2022 Travel Recommendgitations for 21-year-old Women. All rights reserved.
-    </footer>
-    <script>
-        const form = document.getElementById('contact-form');
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            alert(`Thank you, ${name}, for your message! We will get back to you soon.`);
-            form.reset();
-        });
-    </script>
+<body class="smooth-scroll">
+
+<div class="header">
+  <button class="navigation" onclick="document.getElementById('home').scrollIntoView();">Home</button>
+  <button class="navigation" onclick="document.getElementById('product').scrollIntoView();">Product</button>
+  <button class="navigation" onclick="document.getElementById('contact').scrollIntoView();">Contact</button>
+</div>
+
+<div id="home" style="height: 600px; background-color: #F0E68C;">
+  <!-- Home content goes here -->
+</div>
+
+<div id="product" style="height: 600px; background-color: #FAFAD2;">
+  <!-- Featured destinations with images and descriptions go here -->
+</div>
+
+<div id="contact" style="height: 600px; background-color: #EEE8AA;">
+  <form>
+    <input type="text" placeholder="Your Name" required><br><br>
+    <input type="email" placeholder="Your Email" required><br><br>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<div class="footer">
+  &copy; 2023 Travel Destinations
+</div>
+
+<script>
+// Handle form submission
+document.querySelector('form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+  alert('Form submitted successfully.');
+});
+</script>
+
 </body>
 </html>

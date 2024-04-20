@@ -3,13 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Travel Destinations</title>
+<title>Travel Website</title>
 <style>
   body { font-family: Arial, sans-serif; }
   .header { background-color: #FFD700; padding: 20px; text-align: center; }
   .navigation button { background-color: blue; color: white; border: none; padding: 10px; margin-right: 10px; cursor: pointer; }
   .footer { background-color: #333; color: white; text-align: center; padding: 10px; position: fixed; width: 100%; bottom: 0; }
   .smooth-scroll { scroll-behavior: smooth; }
+  form { text-align: center; }
+  label, input { margin: 5px; }
 </style>
 </head>
 <body class="smooth-scroll">
@@ -30,8 +32,10 @@
 
 <div id="contact" style="height: 600px; background-color: #EEE8AA;">
   <form>
-    <input type="text" placeholder="Your Name" required><br><br>
-    <input type="email" placeholder="Your Email" required><br><br>
+    <label for="name">Your Name</label><br>
+    <input id="name" type="text" placeholder="Your Name" required><br><br>
+    <label for="email">Your Email</label><br>
+    <input id="email" type="email" placeholder="Your Email" required><br><br>
     <button type="submit">Submit</button>
   </form>
 </div>
